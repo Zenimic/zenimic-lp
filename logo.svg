@@ -1,0 +1,29 @@
+<svg width="260" height="72" viewBox="0 0 260 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gZ" x1="0" y1="72" x2="72" y2="0">
+      <stop offset="0%" stop-color="#00C48C"/>
+      <stop offset="100%" stop-color="#0077CC"/>
+    </linearGradient>
+    <linearGradient id="gO" x1="0" y1="72" x2="72" y2="0">
+      <stop offset="0%" stop-color="#70AA90"/>
+      <stop offset="100%" stop-color="#7090AA"/>
+    </linearGradient>
+    <linearGradient id="gC" x1="0" y1="72" x2="72" y2="0">
+      <stop offset="0%" stop-color="#70AA90" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#7090AA" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="gText" x1="80" y1="0" x2="260" y2="72">
+      <stop offset="0%" stop-color="#00C48C"/>
+      <stop offset="100%" stop-color="#0077CC"/>
+    </linearGradient>
+  </defs>
+  <!-- シンボル -->
+  <circle cx="36" cy="36" r="32" stroke="url(#gC)" stroke-width="2.5"/>
+  <ellipse cx="36" cy="36" rx="32" ry="13" stroke="url(#gO)" stroke-width="3" transform="rotate(-30 36 36)" fill="none"/>
+  <path d="M18 24 L54 24 L18 48 L54 48" stroke="url(#gZ)" stroke-width="6.5" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
+  <circle cx="62" cy="18" r="5" fill="#70AA90"/>
+  <circle cx="10" cy="54" r="3.5" fill="#7090AA" opacity="0.8"/>
+  <!-- テキスト -->
+  <text x="84" y="50" font-family="'Segoe UI', system-ui, sans-serif" font-size="38" font-weight="700" letter-spacing="-0.8" fill="#111111">Zen</text>
+  <text x="147" y="50" font-family="'Segoe UI', system-ui, sans-serif" font-size="38" font-weight="700" letter-spacing="-0.8" fill="url(#gText)">imic</text>
+</svg>

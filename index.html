@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>合同会社Zenimic｜Mimic the best. Reach the zenith.</title>
+<meta name="description" content="合同会社Zenimicは、通信サービスの営業代行、アプリ・SaaS開発、経営コンサルティングを手がける東京の合同会社です。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-soft:#f4f8f7;
+    --ink:#10151a;
+    --ink-soft:#5b6570;
+    --line:#e4eae9;
+    --green:#00c48c;
+    --blue:#0077cc;
+    --green-soft:#70aa90;
+    --blue-soft:#7090aa;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter','Noto Sans JP',system-ui,sans-serif;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  .jp{font-family:'Noto Sans JP','Inter',system-ui,sans-serif;}
+  h1,h2,h3,.disp{
+    font-family:'Space Grotesk','Noto Sans JP',system-ui,sans-serif;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  ::selection{background:var(--green);color:#fff;}
+
+  /* ---- header ---- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  header .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    height:76px;
+  }
+  header img{height:30px;display:block;}
+  nav{display:flex;gap:32px;font-size:14px;font-weight:500;color:var(--ink-soft);}
+  nav a:hover{color:var(--ink);}
+  @media (max-width:640px){ nav{gap:16px;font-size:13px;} }
+
+  /* ---- hero ---- */
+  .hero{
+    position:relative;
+    padding:96px 0 88px;
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    align-items:center;
+    gap:40px;
+  }
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .hero{padding:56px 0 64px;}
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:600;color:var(--green-soft);
+    letter-spacing:0.04em;margin-bottom:20px;
+  }
+  .eyebrow::before{
+    content:"";width:6px;height:6px;border-radius:50%;
+    background:linear-gradient(135deg,var(--green),var(--blue));
+  }
+  .hero h1{
+    font-size:44px;font-weight:700;line-height:1.35;
+    color:var(--ink);
+  }
+  @media (max-width:860px){ .hero h1{font-size:32px;} }
+  .hero h1 .grad{
+    background:linear-gradient(135deg,var(--green),var(--blue));
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  }
+  .hero p.lead{
+    margin-top:22px;font-size:16px;color:var(--ink-soft);max-width:46ch;
+  }
+  .hero .tagline{
+    margin-top:28px;font-size:13px;color:var(--ink-soft);
+    font-family:'Space Grotesk',sans-serif;letter-spacing:0.02em;
+    border-left:2px solid var(--green);padding-left:12px;
+  }
+  .cta-row{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:13px 26px;border-radius:999px;
+    font-size:14px;font-weight:600;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-primary{
+    background:linear-gradient(135deg,var(--green),var(--blue));
+    color:#fff;
+  }
+  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(0,119,204,0.25);}
+  .btn-ghost{
+    border:1px solid var(--line);color:var(--ink);
+  }
+  .btn-ghost:hover{border-color:var(--blue-soft);}
+
+  /* orbit signature graphic */
+  .orbit-stage{
+    position:relative;height:340px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  @media (max-width:860px){ .orbit-stage{height:240px;} }
+  .orbit-stage svg{width:100%;height:100%;max-width:360px;}
+  .orbit-ring{
+    transform-origin:180px 180px;
+    animation:spin 26s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce){ .orbit-ring{animation:none;} }
+  @keyframes spin{to{transform:rotate(360deg);}}
+
+  /* ---- section shells ---- */
+  section{padding:88px 0;}
+  .section-head{max-width:56ch;margin-bottom:52px;}
+  .section-head .eyebrow{margin-bottom:14px;}
+  .section-head h2{font-size:30px;font-weight:700;}
+  .section-head p{margin-top:14px;color:var(--ink-soft);font-size:15px;}
+  .bg-soft{background:var(--bg-soft);}
+
+  /* ---- pillars ---- */
+  .pillars{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:var(--line);border:1px solid var(--line);border-radius:18px;
+    overflow:hidden;
+  }
+  @media (max-width:860px){ .pillars{grid-template-columns:1fr;} }
+  .pillar{
+    background:#fff;padding:36px 30px;position:relative;
+  }
+  .pillar .node{
+    width:40px;height:40px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:22px;position:relative;
+  }
+  .pillar .node svg{width:100%;height:100%;}
+  .pillar h3{font-size:18px;font-weight:700;margin-bottom:10px;}
+  .pillar p{font-size:14px;color:var(--ink-soft);}
+  .pillar .items{margin-top:16px;display:flex;flex-direction:column;gap:6px;}
+  .pillar .items span{
+    font-size:12.5px;color:var(--ink-soft);
+    padding-left:14px;position:relative;
+  }
+  .pillar .items span::before{
+    content:"";position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;
+    background:linear-gradient(135deg,var(--green),var(--blue));
+  }
+
+  /* ---- company table ---- */
+  .company-grid{
+    display:grid;grid-template-columns:200px 1fr;
+    border-top:1px solid var(--line);
+  }
+  @media (max-width:640px){ .company-grid{grid-template-columns:130px 1fr;} }
+  .company-grid dt,.company-grid dd{
+    padding:18px 0;border-bottom:1px solid var(--line);font-size:14.5px;
+  }
+  .company-grid dt{color:var(--ink-soft);font-weight:500;}
+  .company-grid dd{font-weight:500;}
+
+  /* ---- contact ---- */
+  .contact-card{
+    background:linear-gradient(135deg, rgba(0,196,140,0.06), rgba(0,119,204,0.06));
+    border:1px solid var(--line);border-radius:20px;
+    padding:56px 44px;text-align:center;
+  }
+  @media (max-width:640px){ .contact-card{padding:40px 24px;} }
+  .contact-card h2{font-size:26px;font-weight:700;}
+  .contact-card p{margin-top:12px;color:var(--ink-soft);font-size:14.5px;}
+  .contact-card .email{
+    display:inline-block;margin-top:26px;font-size:16px;font-weight:600;
+    font-family:'Space Grotesk',sans-serif;
+    padding:14px 28px;border-radius:999px;background:#fff;border:1px solid var(--line);
+  }
+  .contact-card .email:hover{border-color:var(--blue-soft);}
+
+  footer{
+    border-top:1px solid var(--line);padding:36px 0;
+  }
+  footer .wrap{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+  }
+  footer img{height:20px;opacity:0.75;}
+  footer .fine{font-size:12px;color:var(--ink-soft);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img src="logo.svg" alt="Zenimic">
+    <nav>
+      <a href="#pillars">事業内容</a>
+      <a href="#company">会社概要</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">TOKYO, JAPAN</div>
+      <h1>最高を模倣し、<br><span class="grad">頂点</span>へたどり着く。</h1>
+      <p class="lead">合同会社Zenimicは、通信サービスの営業代行、アプリ・SaaS開発、経営コンサルティングという3つの事業を軸に、既存の優れたモデルを取り入れながら独自の価値へと磨き上げていく会社です。</p>
+      <div class="tagline">"Mimic the best. Reach the zenith."</div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#pillars">事業内容を見る</a>
+        <a class="btn btn-ghost" href="#contact">お問い合わせ</a>
+      </div>
+    </div>
+    <div class="orbit-stage">
+      <svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gZ2" x1="0" y1="360" x2="360" y2="0">
+            <stop offset="0%" stop-color="#00C48C"/>
+            <stop offset="100%" stop-color="#0077CC"/>
+          </linearGradient>
+          <linearGradient id="gO2" x1="0" y1="360" x2="360" y2="0">
+            <stop offset="0%" stop-color="#70AA90"/>
+            <stop offset="100%" stop-color="#7090AA"/>
+          </linearGradient>
+        </defs>
+        <circle cx="180" cy="180" r="150" stroke="#e4eae9" stroke-width="1.5" fill="none"/>
+        <g class="orbit-ring">
+          <ellipse cx="180" cy="180" rx="150" ry="62" stroke="url(#gO2)" stroke-width="2" fill="none" transform="rotate(-30 180 180)"/>
+          <circle cx="303" cy="128" r="7" fill="#00C48C"/>
+          <circle cx="57" cy="232" r="5" fill="#0077CC"/>
+          <circle cx="230" cy="270" r="4" fill="#7090AA"/>
+        </g>
+        <path d="M130 130 L230 130 L130 230 L230 230" stroke="url(#gZ2)" stroke-width="14" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="pillars" class="bg-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">BUSINESS</div>
+      <h2 class="jp">3つの事業の軸</h2>
+      <p>異なる領域の事業を組み合わせることで、営業力・開発力・経営視点を相互に活かす体制をとっています。</p>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="node">
+          <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="none" stroke="#00C48C" stroke-width="2" opacity="0.25"/><circle cx="20" cy="20" r="6" fill="#00C48C"/></svg>
+        </div>
+        <h3 class="jp">通信サービス営業代行</h3>
+        <p class="jp">国内大手通信事業者のサービスを、実店舗を拠点に取り扱う営業代行事業。長年の通信業界での営業実績をもとに展開しています。</p>
+        <div class="items">
+          <span class="jp">取次パートナー経由での営業代行</span>
+          <span class="jp">店舗型・対面営業</span>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <div class="node">
+          <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="none" stroke="#0077CC" stroke-width="2" opacity="0.25"/><circle cx="20" cy="20" r="6" fill="#0077CC"/></svg>
+        </div>
+        <h3 class="jp">アプリ・SaaS開発</h3>
+        <p class="jp">自社プロダクトの企画・開発・運営を行っています。個人・小規模事業者の日々の業務や資産管理を支えるツールを開発しています。</p>
+        <div class="items">
+          <span class="jp">サブスクリプション管理アプリ</span>
+          <span class="jp">シフト管理アプリ</span>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <div class="node">
+          <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="none" stroke="#7090AA" stroke-width="2" opacity="0.25"/><circle cx="20" cy="20" r="6" fill="#7090AA"/></svg>
+        </div>
+        <h3 class="jp">経営コンサルティング</h3>
+        <p class="jp">中小企業・個人商店向けに、売上管理・経費構造の見直しなど、実務に根ざした経営改善のご相談に対応しています。</p>
+        <div class="items">
+          <span class="jp">飲食店の経営改善支援</span>
+          <span class="jp">業務フローの整理・効率化</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="company">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">COMPANY</div>
+      <h2 class="jp">会社概要</h2>
+    </div>
+    <dl class="company-grid jp">
+      <dt>商号</dt><dd>合同会社Zenimic</dd>
+      <dt>代表社員</dt><dd>柴山 史成</dd>
+      <dt>設立</dt><dd>2026年7月</dd>
+      <dt>所在地</dt><dd>〒160-0023　東京都新宿区西新宿三丁目3番13号　西新宿水間ビル6階</dd>
+      <dt>事業年度</dt><dd>毎年7月1日〜翌年6月30日</dd>
+      <dt>事業内容</dt><dd>通信サービス営業代行／ソフトウェア・SaaS・アプリケーションの企画開発／経営コンサルティング</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="contact" class="bg-soft">
+  <div class="wrap">
+    <div class="contact-card">
+      <h2 class="jp">お問い合わせ</h2>
+      <p class="jp">事業内容・お取引に関するご質問は、下記メールアドレスまでご連絡ください。</p>
+      <a class="email" href="mailto:zenimic.info@gmail.com">zenimic.info@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="logo.svg" alt="Zenimic">
+    <div class="fine jp">© 2026 合同会社Zenimic. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
